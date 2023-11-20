@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Reggae+One&display=swap');
+
+/* Universal Reset and Basic Styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Font and Background */
+body {
+    font-family: 'Reggae One', cursive;
+    background: linear-gradient(to right, #d4d3dd, #efefbb);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Headings */
+h1 {
+    font-size: 3rem;
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Container for Pokemon Cards */
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 1200px;
+}
+
+/* Pokemon Card Styles */
+.poke {
+    background: #fff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.poke:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.poke .img-container {
+    width: 120px;
+    height: 120px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.poke .img-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    transition: transform 0.2s ease-in-out;
+}
+
+.poke .img-container img:hover {
+    transform: scale(1.1);
+}
+
+.poke .info {
+    margin-top: 10px;
+}
+
+.poke .info .number {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    color: #333;
+}
+
+.poke .info .name {
+    margin: 10px 0 5px;
+    letter-spacing: 1px;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.poke .info .type {
+    font-size: 0.9rem;
+    font-weight: bold;
+}
